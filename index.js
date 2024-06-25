@@ -5,7 +5,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 const port = 3000;
 
-const genAI = new GoogleGenerativeAI('API KEY');
+const genAI = new GoogleGenerativeAI('AIzaSyCUJlBf9xCzQnvKPGO6zJIMCJ5QZRUPqIo');
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // Allow all origins for now, you can restrict this to specific origins

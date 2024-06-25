@@ -4,24 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
   <div class="container">
-    <h1>Personalized ChatBox</h1>
+    <h1>ChatBox</h1>
     <form onsubmit="event.preventDefault(); generateContent();">
-      <label for="prompt">What`s in your mind?</label>
-      <input type="text" id="prompt" name="prompt" required>
+      <label for="prompt">Developed By <a id="new" href="https://eshaniqbal.github.io/portfolio1" target="_blank">Eshan Iqbal</a></label>
+      <input type="text" placeholder="What`s in your mind?" id="prompt" name="prompt" required>
       <button type="submit">Generate</button>
     </form>
     <div class="response" id="response"></div>
+   <center>
+    <div class="footer">
+      
+      <p id="para"> Follow me on social media <br>
+        <a target="_blank" href="https://www.linkedin.com/in/eshan-iqbal-a8678b252"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a target="_blank" href="https://github.com/Eshaniqbal"><i class="fa-brands fa-github"></i></a>
+        <a target="_blank" href="https://www.instagram.com/eshaniqbal_?igsh=MWJ4cGJlbjNxcWlyeQ=="><i class="fa-brands fa-instagram"></i></a>
+      </p>
+    </div>
+  </center>
   </div>
+ 
 
   <script>
     async function generateContent() {
       const prompt = document.getElementById('prompt').value;
       const responseDiv = document.getElementById('response');
-      responseDiv.innerHTML = "<p>Generating...</p>"; // Add a loading message
+      responseDiv.innerHTML = "<p>Generating...</p>"; 
 
       try {
         const response = await fetch('http://localhost:3000/generate', {

@@ -7,27 +7,37 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #2e2e2e;
+    background-color: #252525;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: rgb(255, 255, 255);
   }
   
   .container {
-    background-color: rgb(218, 216, 216);
+  
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(255, 255, 255, 0.944);
     max-width: 600px;
     width: 100%;
     margin: 1rem;
+   
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   h1 {
     text-align: center;
     margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   
   form {
@@ -35,15 +45,26 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   
   label {
     margin-bottom: 0.5rem;
   }
-  
+  #prompt{
+    padding: 18px;
+    font-size: 15px;
+    font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+
   input[type="text"] {
     padding: 0.5rem;
-    border: 1px solid #b5b5b5;
+    border: 1px solid #2d2d2d;
     border-radius: 4px;
     width: 100%;
     margin-bottom: 1rem;
@@ -60,15 +81,43 @@
   
   button:hover {
     
-    box-shadow: 10px 10px black;
+    box-shadow: 10px 10px crimson;
   }
-  
+  #para{
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  #para>a{
+    padding: 5px;
+    color: #ffffff;
+    font-size: 15px;
+  }
+  #new{
+    text-decoration: none;
+  color: crimson;
+  }
+  #prompt:focus{
+    outline: none;
+    transform: scale(1.03);
+    transition: all 0.3s;
+    color: crimson;
+  }
+  #para>a:hover{
+  color: crimson;
+   transition: all 0.5s;
+  }
   .response {
     background-color: transparent;
     padding: 1rem;
     border-radius: 4px;
-    max-height: 300px;
+  max-height: 300px;
     overflow-y: auto;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
   }
   
   .response p {
